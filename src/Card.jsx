@@ -69,7 +69,8 @@ function Card( {setCurrentScore, setBestScore, currentScore, bestScore, availabl
             setIsCurrentCardWrong(true)
         }
         
-        document.querySelector(".card").src= `https://art.hearthstonejson.com/v1/render/latest/enUS/512x/${cardSelected.id}.png`
+        //document.querySelector(".card").src= `https://art.hearthstonejson.com/v1/render/latest/enUS/512x/${cardSelected.id}.png`
+        document.querySelector(".card").src = `https://a-amen.github.io/hsfakedump.github.io/assets/images/${cardSelected.id}.webp`
     }
 
     function handleGuessClicked(e) {
