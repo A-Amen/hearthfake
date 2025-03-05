@@ -26,7 +26,7 @@ import Emblem from "./customDisplay/Emblem.jsx"
 import WeaponAttack from "./customDisplay/WeaponAttack.jsx"
 import Durability from "./customDisplay/Durability.jsx"
 import Armor from "./customDisplay/Armor.jsx"
-
+import cardData from "./assets/cards.collectible.json"
 function Card( {setCurrentScore, setBestScore, currentScore, bestScore, availableExpansions }) {
     let [cards, setCards] = useState([])
     let [currentCard, setCurrentCard] = useState({})
@@ -36,9 +36,9 @@ function Card( {setCurrentScore, setBestScore, currentScore, bestScore, availabl
     useEffect(() => {
         const fetchCards = async () => {
             try {
-                const response = await fetch("https://api.hearthstonejson.com/v1/latest/enUS/cards.collectible.json")
-                const cardsArray = await response.json()
-                setCards(cardsArray)
+                //const response = await fetch("https://api.hearthstonejson.com/v1/latest/enUS/cards.collectible.json")
+                //const cardsArray = await response.json()
+                setCards(cardData)
             } catch (error) {
                 console.error("Error fetching card data:", error);
             }
